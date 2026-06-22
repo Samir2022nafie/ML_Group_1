@@ -2,7 +2,7 @@
 
 A machine learning web application that identifies flower species from uploaded images using Deep Learning and Transfer Learning.
 
-##💻 Web app
+## 💻 Web app
 
 https://flower-species-classifier.streamlit.app/
 
