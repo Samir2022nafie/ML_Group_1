@@ -38,3 +38,16 @@ def preprocess(image, label):
 
 train_ds = ds_train.map(preprocess)
 test_ds = ds_test.map(preprocess)
+
+BATCH_SIZE = 32
+
+train_ds = train_ds.batch(BATCH_SIZE)
+test_ds = test_ds.batch(BATCH_SIZE)
+
+train_ds = train_ds.prefetch(
+    tf.data.AUTOTUNE
+)
+
+test_ds = test_ds.prefetch(
+    tf.data.AUTOTUNE
+)
