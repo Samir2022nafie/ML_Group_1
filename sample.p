@@ -17,3 +17,11 @@ def load_model():
     )
 
 model = load_model()
+
+class_names = [
+    "dandelion",
+    "daisy",
+    "tulips",
+    "sunflowers",
+    "roses"
+]
