@@ -22,3 +22,19 @@ print(
     "Classes:",
     len(class_names)
 )
+
+IMG_SIZE = 224
+
+def preprocess(image, label):
+
+    image = tf.image.resize(
+        image,
+        (IMG_SIZE, IMG_SIZE)
+    )
+
+    image = image / 255.0
+
+    return image, label
+
+train_ds = ds_train.map(preprocess)
+test_ds = ds_test.map(preprocess)
