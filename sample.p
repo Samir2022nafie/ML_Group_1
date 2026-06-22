@@ -9,3 +9,11 @@ st.set_page_config(
     page_icon="🌸",
     layout="centered"
 )
+
+@st.cache_resource
+def load_model():
+    return tf.keras.models.load_model(
+        "flower_classifier.keras"
+    )
+
+model = load_model()
