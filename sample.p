@@ -25,3 +25,11 @@ class_names = [
     "sunflowers",
     "roses"
 ]
+
+flower_info = {
+    "daisy": "Daisies are known for their white petals and yellow centers.",
+    "dandelion": "Dandelions are flowering plants commonly found in grasslands and gardens.",
+    "roses": "Roses are popular ornamental flowers with many colors and varieties.",
+    "sunflowers": "Sunflowers are famous for their large yellow petals and tendency to follow the sun.",
+    "tulips": "Tulips are colorful spring-blooming flowers that originated in Central Asia."
+}
