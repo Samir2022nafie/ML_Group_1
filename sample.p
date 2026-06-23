@@ -22,6 +22,20 @@ st.markdown(
 )
 
 st.divider()
+
+col1, col2 = st.columns([3,1])
+
+with col1:
+    uploaded_file = st.file_uploader(
+        "📷 Upload Flower Image",
+        type=[
+            "jpg",
+            "jpeg",
+            "png",
+            "jfif",
+            "webp"
+        ]
+    )
     return tf.keras.models.load_model(
         "flower_classifier.keras"
     )
