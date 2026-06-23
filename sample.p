@@ -21,6 +21,7 @@ st.markdown(
     "Upload a flower image and let the AI identify its species."
 )
 
+st.divider()
     return tf.keras.models.load_model(
         "flower_classifier.keras"
     )
