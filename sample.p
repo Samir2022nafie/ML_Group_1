@@ -12,6 +12,15 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model():
+
+st.title(
+    "🌸 Flower Species Classifier"
+)
+
+st.markdown(
+    "Upload a flower image and let the AI identify its species."
+)
+
     return tf.keras.models.load_model(
         "flower_classifier.keras"
     )
