@@ -29,6 +29,19 @@ model.compile(
     as_supervised=True,
     with_info=True
 )
+history = model.fit(
+    train_ds,
+    validation_data=test_ds,
+    epochs=5
+)
+
+test_loss, test_accuracy = model.evaluate(
+    test_ds
+)
+
+model.save(
+    "flower_classifier.keras"
+)
 
 class_names = ds_info.features["label"].names
 
