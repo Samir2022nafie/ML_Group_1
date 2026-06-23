@@ -18,6 +18,11 @@ model = tf.keras.Sequential([
     )
 ])
 
+model.compile(
+    optimizer="adam",
+    loss="sparse_categorical_crossentropy",
+    metrics=["accuracy"]
+)
 (ds_train, ds_test), ds_info = tfds.load(
     "tf_flowers",
     split=["train[:80%]", "train[80%:]"],
