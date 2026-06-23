@@ -51,3 +51,10 @@ train_ds = train_ds.prefetch(
 test_ds = test_ds.prefetch(
     tf.data.AUTOTUNE
 )
+base_model = tf.keras.applications.EfficientNetB0(
+    include_top=False,
+    weights="imagenet",
+    input_shape=(224,224,3)
+)
+
+base_model.trainable = False
