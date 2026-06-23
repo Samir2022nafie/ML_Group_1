@@ -36,6 +36,16 @@ with col1:
             "webp"
         ]
     )
+
+with col2:
+
+    st.write("")
+    st.write("")
+
+    predict_button = st.button(
+        "🔍 Predict",
+        use_container_width=True
+    )
     return tf.keras.models.load_model(
         "flower_classifier.keras"
     )
